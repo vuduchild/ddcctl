@@ -57,7 +57,7 @@
 #define COLOR_PRESET_C                 0xE0     // dell u2515h -> Brightness on/off (0 or 1)
 #define POWER_CONTROL 0xE1
 #define TOP_LEFT_SCREEN_PURITY 0xE8
-#define TOP_RIGHT_SCREEN_PURITY 0xE9
+#define PICTURE_IN_PICTURE 0xE9
 #define BOTTOM_LEFT_SCREEN_PURITY 0xE8
 #define BOTTOM_RIGHT_SCREEN_PURITY 0xEB
 

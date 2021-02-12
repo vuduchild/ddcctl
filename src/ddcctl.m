@@ -235,6 +235,7 @@ int main(int argc, const char * argv[])
         @"\t-v <1-254> [speaker volume]\n"
         @"\t-i <1-18>  [select input source]\n"
         @"\t-p <1|2-5> [power on | standby/off]\n"
+        @"\t-pip <0|1-254> [0 = PIP off | 33 = PIP small | 34 = PIP large | 36 PBP on]\n"
         @"\t-o         [read-only orientation]\n"
         @"\n"
         @"----- Settings (testing) -----\n"
@@ -307,6 +308,12 @@ int main(int argc, const char * argv[])
                 i++;
                 if (i >= argc) break;
                 [actions setObject:@[@DPMS, [[NSString alloc] initWithUTF8String:argv[i]]] forKey:@"p"];
+            }
+
+            else if (!strcmp(argv[i], "-pip")) {
+                i++;
+                if (i >= argc) break;
+                [actions setObject:@[@PICTURE_IN_PICTURE, [[NSString alloc] initWithUTF8String:argv[i]]] forKey:@"pip"];
             }
 
             else if (!strcmp(argv[i], "-o")) { // read only
